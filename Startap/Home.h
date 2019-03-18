@@ -5,6 +5,7 @@
 #include "CalculateLiquidation.h"
 #include "SalesAnalysis.h"
 #include "AnalysisFinance.h"
+#include "Author.h"
 
 namespace Startap {
 
@@ -483,7 +484,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->button3->ForeColor = System::Drawing::Color::DarkOrange;
 			this->button3->Location = System::Drawing::Point(260, -2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(157, 64);
+			this->button3->Size = System::Drawing::Size(138, 64);
 			this->button3->TabIndex = 4;
 			this->button3->Text = L"Отчет Excel";
 			this->button3->UseVisualStyleBackColor = false;
@@ -500,11 +501,11 @@ private: System::Windows::Forms::Button^  button1;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button2->ForeColor = System::Drawing::Color::DarkOrange;
-			this->button2->Location = System::Drawing::Point(544, -2);
+			this->button2->Location = System::Drawing::Point(512, -2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(115, 64);
+			this->button2->Size = System::Drawing::Size(155, 64);
 			this->button2->TabIndex = 3;
-			this->button2->Text = L"Об авторе";
+			this->button2->Text = L"О программе";
 			this->button2->UseMnemonic = false;
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Home::button2_Click);
@@ -521,7 +522,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button1->ForeColor = System::Drawing::Color::DarkOrange;
-			this->button1->Location = System::Drawing::Point(423, -2);
+			this->button1->Location = System::Drawing::Point(394, -2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(115, 64);
 			this->button1->TabIndex = 2;
@@ -2108,6 +2109,8 @@ private: System::Void btnFile_Click(System::Object^  sender, System::EventArgs^ 
 	rtbFile->Visible = true;
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	Author^ author = gcnew Author;
+	author->Show();
 }
 };
 }

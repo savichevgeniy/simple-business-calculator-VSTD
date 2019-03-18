@@ -1,13 +1,14 @@
-#include "Home.h"
+#include "Referense.h"
 #include <string>
 
 using namespace System;
 using namespace System::Windows::Forms;
 [STAThreadAttribute]
-void main(cli::array<String^>^ args)
+void Main1(cli::array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Startap::Home form;
+	Startap::Referense form;
 	Application::Run(%form);
 }
+

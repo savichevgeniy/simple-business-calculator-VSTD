@@ -1,13 +1,13 @@
-#include "Home.h"
+#include "Author.h"
 #include <string>
 
 using namespace System;
 using namespace System::Windows::Forms;
 [STAThreadAttribute]
-void main(cli::array<String^>^ args)
+void Main(cli::array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Startap::Home form;
+	Startap::Author form;
 	Application::Run(%form);
 }

@@ -133,12 +133,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Autor.cpp" />
+    <ClCompile Include="Author.cpp" />
     <ClCompile Include="Home.cpp" />
+    <ClCompile Include="Referense.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnalysisFinance.h" />
-    <ClInclude Include="Autor.h">
+    <ClInclude Include="Author.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="CalculateLiquidation.h" />
@@ -148,11 +149,20 @@
     <ClInclude Include="Home.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Referense.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="SalesAnalysis.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Author.resx">
+      <DependentUpon>Author.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Referense.resx">
+      <DependentUpon>Referense.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
