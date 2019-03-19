@@ -6,6 +6,8 @@
 #include "SalesAnalysis.h"
 #include "AnalysisFinance.h"
 #include "Author.h"
+#include "Referense.h"
+#include <iomanip>
 
 namespace Startap {
 
@@ -224,43 +226,52 @@ namespace Startap {
 	private: System::Windows::Forms::TextBox^  FulfilmentPlan;
 	private: System::Windows::Forms::Button^  btnResult5;
 	private: System::Windows::Forms::Label^  label29;
-private: System::Windows::Forms::GroupBox^  btn6;
+	private: System::Windows::Forms::GroupBox^  btn6;
 
 
 
 
 
-private: System::Windows::Forms::GroupBox^  groupBox16;
-private: System::Windows::Forms::Label^  label38;
-private: System::Windows::Forms::TextBox^  GoodsSaves;
+	private: System::Windows::Forms::GroupBox^  groupBox16;
+	private: System::Windows::Forms::Label^  label38;
+	private: System::Windows::Forms::TextBox^  GoodsSaves;
 
-private: System::Windows::Forms::TextBox^  Receivables;
+	private: System::Windows::Forms::TextBox^  Receivables;
 
-private: System::Windows::Forms::Label^  label39;
-private: System::Windows::Forms::GroupBox^  groupBox17;
-private: System::Windows::Forms::TextBox^  CleanWorkingCapital;
-
-
+	private: System::Windows::Forms::Label^  label39;
+	private: System::Windows::Forms::GroupBox^  groupBox17;
+	private: System::Windows::Forms::TextBox^  CleanWorkingCapital;
 
 
 
-private: System::Windows::Forms::Label^  label42;
-private: System::Windows::Forms::TextBox^  WorkingCapital;
-
-private: System::Windows::Forms::Button^  btnResult6;
-
-private: System::Windows::Forms::Label^  label43;
-private: System::Windows::Forms::TextBox^  AccountSpayable;
 
 
+	private: System::Windows::Forms::Label^  label42;
+	private: System::Windows::Forms::TextBox^  WorkingCapital;
 
-private: System::Windows::Forms::Label^  label36;
-private: System::Windows::Forms::Button^  btnFile;
+	private: System::Windows::Forms::Button^  btnResult6;
 
-private: System::Windows::Forms::RichTextBox^  rtbFile;
-private: System::Windows::Forms::Button^  button3;
-private: System::Windows::Forms::Button^  button2;
-private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Label^  label43;
+	private: System::Windows::Forms::TextBox^  AccountSpayable;
+
+
+
+	private: System::Windows::Forms::Label^  label36;
+	private: System::Windows::Forms::Button^  btnFile;
+
+	private: System::Windows::Forms::RichTextBox^  rtbFile;
+
+	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::GroupBox^  gbFile;
+
+	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button3;
+	private: System::Windows::Forms::Label^  label37;
+	private: System::Windows::Forms::SaveFileDialog^  Save;
+
+
+
 
 
 
@@ -283,7 +294,6 @@ private: System::Windows::Forms::Button^  button1;
 			this->Logo = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->Header = (gcnew System::Windows::Forms::Panel());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->btnFile = (gcnew System::Windows::Forms::Button());
@@ -399,6 +409,11 @@ private: System::Windows::Forms::Button^  button1;
 			this->btnResult6 = (gcnew System::Windows::Forms::Button());
 			this->label43 = (gcnew System::Windows::Forms::Label());
 			this->rtbFile = (gcnew System::Windows::Forms::RichTextBox());
+			this->gbFile = (gcnew System::Windows::Forms::GroupBox());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->Save = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->Logo->SuspendLayout();
 			this->Header->SuspendLayout();
 			this->Menu->SuspendLayout();
@@ -423,6 +438,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->btn6->SuspendLayout();
 			this->groupBox16->SuspendLayout();
 			this->groupBox17->SuspendLayout();
+			this->gbFile->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// Logo
@@ -457,7 +473,6 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->Header->BackColor = System::Drawing::Color::Transparent;
 			this->Header->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->Header->Controls->Add(this->button3);
 			this->Header->Controls->Add(this->button2);
 			this->Header->Controls->Add(this->button1);
 			this->Header->Controls->Add(this->btnFile);
@@ -469,25 +484,6 @@ private: System::Windows::Forms::Button^  button1;
 			this->Header->Name = L"Header";
 			this->Header->Size = System::Drawing::Size(782, 64);
 			this->Header->TabIndex = 1;
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::Transparent;
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatAppearance->CheckedBackColor = System::Drawing::Color::Red;
-			this->button3->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Maroon;
-			this->button3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Maroon;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button3->ForeColor = System::Drawing::Color::DarkOrange;
-			this->button3->Location = System::Drawing::Point(260, -2);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(138, 64);
-			this->button3->TabIndex = 4;
-			this->button3->Text = L"Отчет Excel";
-			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// button2
 			// 
@@ -528,6 +524,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Справка\r\n";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Home::button1_Click_1);
 			// 
 			// btnFile
 			// 
@@ -541,7 +538,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->btnFile->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->btnFile->ForeColor = System::Drawing::Color::DarkOrange;
-			this->btnFile->Location = System::Drawing::Point(3, -2);
+			this->btnFile->Location = System::Drawing::Point(127, -2);
 			this->btnFile->Name = L"btnFile";
 			this->btnFile->Size = System::Drawing::Size(259, 64);
 			this->btnFile->TabIndex = 1;
@@ -1819,11 +1816,89 @@ private: System::Windows::Forms::Button^  button1;
 			// 
 			this->rtbFile->BackColor = System::Drawing::Color::Maroon;
 			this->rtbFile->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->rtbFile->Location = System::Drawing::Point(296, 109);
+			this->rtbFile->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->rtbFile->ForeColor = System::Drawing::Color::DarkOrange;
+			this->rtbFile->Location = System::Drawing::Point(17, 61);
 			this->rtbFile->Name = L"rtbFile";
-			this->rtbFile->Size = System::Drawing::Size(640, 442);
+			this->rtbFile->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::Vertical;
+			this->rtbFile->Size = System::Drawing::Size(599, 309);
 			this->rtbFile->TabIndex = 13;
 			this->rtbFile->Text = L"";
+			// 
+			// gbFile
+			// 
+			this->gbFile->BackColor = System::Drawing::Color::Transparent;
+			this->gbFile->Controls->Add(this->button4);
+			this->gbFile->Controls->Add(this->button3);
+			this->gbFile->Controls->Add(this->label37);
+			this->gbFile->Controls->Add(this->rtbFile);
+			this->gbFile->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->gbFile->Font = (gcnew System::Drawing::Font(L"Rockwell", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->gbFile->ForeColor = System::Drawing::Color::Maroon;
+			this->gbFile->Location = System::Drawing::Point(296, 109);
+			this->gbFile->Name = L"gbFile";
+			this->gbFile->Size = System::Drawing::Size(640, 442);
+			this->gbFile->TabIndex = 13;
+			this->gbFile->TabStop = false;
+			this->gbFile->Text = L"Запись данных в файл";
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::Transparent;
+			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button4->FlatAppearance->BorderSize = 0;
+			this->button4->FlatAppearance->CheckedBackColor = System::Drawing::Color::Red;
+			this->button4->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Maroon;
+			this->button4->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Maroon;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button4->ForeColor = System::Drawing::Color::DarkOrange;
+			this->button4->Location = System::Drawing::Point(17, 386);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(155, 46);
+			this->button4->TabIndex = 16;
+			this->button4->Text = L"Очистить";
+			this->button4->UseMnemonic = false;
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &Home::button4_Click);
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Transparent;
+			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatAppearance->CheckedBackColor = System::Drawing::Color::Red;
+			this->button3->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Maroon;
+			this->button3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Maroon;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button3->ForeColor = System::Drawing::Color::DarkOrange;
+			this->button3->Location = System::Drawing::Point(479, 390);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(155, 46);
+			this->button3->TabIndex = 15;
+			this->button3->Text = L"Записать";
+			this->button3->UseMnemonic = false;
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Home::button3_Click_1);
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->BackColor = System::Drawing::Color::Transparent;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Rockwell", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label37->ForeColor = System::Drawing::Color::DarkOrange;
+			this->label37->Location = System::Drawing::Point(93, 31);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(461, 26);
+			this->label37->TabIndex = 14;
+			this->label37->Text = L"Проверьте корректность данных перед записью";
+			this->label37->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// Home
 			// 
@@ -1832,7 +1907,7 @@ private: System::Windows::Forms::Button^  button1;
 			this->BackColor = System::Drawing::Color::DarkSlateGray;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1012, 583);
-			this->Controls->Add(this->rtbFile);
+			this->Controls->Add(this->gbFile);
 			this->Controls->Add(this->btn6);
 			this->Controls->Add(this->btn5);
 			this->Controls->Add(this->btn4);
@@ -1892,6 +1967,8 @@ private: System::Windows::Forms::Button^  button1;
 			this->groupBox16->PerformLayout();
 			this->groupBox17->ResumeLayout(false);
 			this->groupBox17->PerformLayout();
+			this->gbFile->ResumeLayout(false);
+			this->gbFile->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1909,7 +1986,7 @@ private: System::Windows::Forms::Button^  button1;
 		btn4->Visible = false;
 		btn5->Visible = false;
 		btn6->Visible = false;
-		rtbFile->Visible = false;
+		gbFile->Visible = false;
 	}
 	private: System::Void btnRPM_Click(System::Object^  sender, System::EventArgs^  e) {
 		label9->Visible = true;
@@ -1919,7 +1996,8 @@ private: System::Windows::Forms::Button^  button1;
 		btn4->Visible = false;
 		btn5->Visible = false;
 		btn6->Visible = false;
-		rtbFile->Visible = false;
+		gbFile->Visible = false;
+		Save->Filter = "RTF|*.rtf";
 
 	}
 	private: System::Void btnResult1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1933,13 +2011,24 @@ private: System::Windows::Forms::Button^  button1;
 			double revenue = Convert::ToInt32(Revenue->Text);
 			double costPrice = Convert::ToInt32(CostPrice->Text);
 			double grossProfit = result.CalculateGrossProfit(revenue, costPrice);
+
 			GrossProfit->Text = grossProfit.ToString() + "руб";
-			GrossProfitability->Text = result.CalculateGrossProfitability(grossProfit, costPrice).ToString() + "%";
+			double grossProfitability = result.CalculateGrossProfitability(grossProfit, costPrice);
+			GrossProfitability->Text = grossProfitability.ToString() + "%";
 
 			double square = Convert::ToInt32(Square->Text);
 			double cost = Convert::ToInt32(Cost->Text);
-			Rental->Text = result.CalculateShopRental(square, cost).ToString() + "руб";
+			double rental = result.CalculateShopRental(square, cost);
+			Rental->Text = rental.ToString() + "руб";
 
+			rtbFile->Text += "\nПрибыль магазина:\n" + "Выручка = " + Revenue->Text + "\n";
+			rtbFile->Text += "Себестоимость = " + CostPrice->Text + "\n";
+			rtbFile->Text += "Площадь обьекта = " + Square->Text + "\n";
+			rtbFile->Text += "Стоимость аренды = " + Cost->Text + "\n";
+			rtbFile->Text += "Результаты расчетов\n";
+			rtbFile->Text += "Валовая прибыль = " + GrossProfit->Text + "\n";
+			rtbFile->Text += "Валовая рентабельность = " + GrossProfitability->Text + "\n";
+			rtbFile->Text += "Аренда магазина = " + Rental->Text + "\n";
 		}
 	}
 	private: System::Void btnRAO_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1950,7 +2039,7 @@ private: System::Windows::Forms::Button^  button1;
 		btn4->Visible = false;
 		btn5->Visible = false;
 		btn6->Visible = false;
-		rtbFile->Visible = false;
+		gbFile->Visible = false;
 	}
 	private: System::Void btnResult2_Click(System::Object^  sender, System::EventArgs^  e) {
 		CalculateTurnover calculateResult;
@@ -1970,6 +2059,14 @@ private: System::Windows::Forms::Button^  button1;
 
 			double turnoverDuration = calculateResult.CalculateTurnoverDuration(numberOfDays, costOfSale, costGoods);
 			TurnoverDuration->Text = turnoverDuration.ToString() + "дней";
+
+			rtbFile->Text += "\nРасчет и анализ оборачиваемости:\n" + "Себестоимость продаж = " + CostOfSale->Text + "\n";
+			rtbFile->Text += "Средняя стоимость товаров = " + CostGoods->Text + "\n";
+			rtbFile->Text += "Количество дней = " + NumberOfDays->Text + "\n";
+			rtbFile->Text += "Результаты расчетов\n";
+			rtbFile->Text += "Средняя себестоимость продаж в день = " + AverageCost->Text + "\n";
+			rtbFile->Text += "Коэфициэнт оборачиваемости товарных запасов = " + TurnoverRatio->Text + "\n";
+			rtbFile->Text += "Длительность оборота товарных запасов = " + TurnoverDuration->Text + "\n";
 		}
 	}
 	private: System::Void btnARB_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1980,7 +2077,7 @@ private: System::Windows::Forms::Button^  button1;
 		btn4->Visible = false;
 		btn5->Visible = false;
 		btn6->Visible = false;
-		rtbFile->Visible = false;
+		gbFile->Visible = false;
 	}
 	private: System::Void btnResult3_Click(System::Object^  sender, System::EventArgs^  e) {
 		CalculateProfitability calculateProfitability;
@@ -2004,6 +2101,15 @@ private: System::Windows::Forms::Button^  button1;
 
 			double profitabilityGoods = calculateProfitability.CalculateProfitabilityGoods(profitGross, averageCostGoods);
 			ProfitabilityGoods->Text = profitabilityGoods.ToString() + "%";
+
+			rtbFile->Text += "\nАнализ рентабельности бизнеса:\n" + "Выручка от продажи = " + SalesProceeds->Text + "\n";
+			rtbFile->Text += "Себестоимость продаж = " + CostProseeds->Text + "\n";
+			rtbFile->Text += "Средняя стоимость товарного запаса = " + AverageCostGoods->Text + "\n";
+			rtbFile->Text += "Результаты расчетов\n";
+			rtbFile->Text += "Валовая прибыль = " + ProfitGross->Text + "\n";
+			rtbFile->Text += "Рентабельность продаж = " + ProfitabilityProseeds->Text + "\n";
+			rtbFile->Text += "Коэфициэнт рентабельности товарного запаса = " + ProfitabilityRatio->Text + "\n";
+			rtbFile->Text += "Рентабельность товарного запаса = " + ProfitabilityGoods->Text + "\n";
 		}
 	}
 
@@ -2015,7 +2121,7 @@ private: System::Windows::Forms::Button^  button1;
 		btn4->Visible = true;
 		btn5->Visible = false;
 		btn6->Visible = false;
-		rtbFile->Visible = false;
+		gbFile->Visible = false;
 	}
 	private: System::Void btnResult4_Click(System::Object^  sender, System::EventArgs^  e) {
 		CalculateLiquidation calculateLiquidstion;
@@ -2029,6 +2135,11 @@ private: System::Windows::Forms::Button^  button1;
 			double currentRate = calculateLiquidstion.CalcelateCurrentRate(currentAssets, currentResponsibility);
 
 			CurrentRate->Text = currentRate.ToString();
+
+			rtbFile->Text += "\nРасчет ликвидности:\n" + "Оборотные активы = " + CurrentAssets->Text + "\n";
+			rtbFile->Text += "Текущие (краткосрочные) обязательства = " + CurrentResponsibility->Text + "\n";
+			rtbFile->Text += "Результаты расчетов\n";
+			rtbFile->Text += "Коэфициэнт текущей ликвидности = " + CurrentRate->Text + "\n";
 		}
 	}
 	private: System::Void btnResult5_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2054,6 +2165,16 @@ private: System::Windows::Forms::Button^  button1;
 
 			RevenueChange->Text = revenueChange.ToString() + "руб";
 			RevenuePercent->Text = revenuePercent.ToString() + "%";
+
+			rtbFile->Text += "\nАнализ продаж:\n" + "Выручка - факт = " + Fact->Text + "\n";
+			rtbFile->Text += "Выручка - план = " + Plan->Text + "\n";
+			rtbFile->Text += "Выручка - текущий период = " + CurrentSeason->Text + "\n";
+			rtbFile->Text += "Выручка - предыдущий период = " + PreviousSeason->Text + "\n";
+			rtbFile->Text += "Результаты анализа\n";
+			rtbFile->Text += "Выполнение плана = " + FulfilmentPlan->Text + "\n";
+			rtbFile->Text += "Выполнение плана (%) = " + PlanPercent->Text + "\n";
+			rtbFile->Text += "Изменение выручки = " + RevenueChange->Text + "\n";
+			rtbFile->Text += "Изменение выручки (%) = " + RevenuePercent->Text + "\n";
 		}
 	}
 	private: System::Void btnAP_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -2064,7 +2185,7 @@ private: System::Windows::Forms::Button^  button1;
 		btn4->Visible = false;
 		btn5->Visible = true;
 		btn6->Visible = false;
-		rtbFile->Visible = false;
+		gbFile->Visible = false;
 	}
 	private: System::Void btnAFU_Click(System::Object^  sender, System::EventArgs^  e) {
 		label9->Visible = true;
@@ -2074,43 +2195,69 @@ private: System::Windows::Forms::Button^  button1;
 		btn4->Visible = false;
 		btn5->Visible = false;
 		btn6->Visible = true;
-		rtbFile->Visible = false;
+		gbFile->Visible = false;
 	}
-private: System::Void btnResult6_Click(System::Object^  sender, System::EventArgs^  e) {
-	AnalysisFinace analysisFinance;
-	if (AccountSpayable->Text == "" || GoodsSaves->Text == "" || Receivables->Text == "") {
-		MessageBox::Show("Недостаточно данных для анализа", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Asterisk);
-	}
-	else {
-		double goodsSaves = Convert::ToInt32(GoodsSaves->Text);
-		double accountSpayble = Convert::ToInt32(AccountSpayable->Text);
-		double receivables = Convert::ToInt32(Receivables->Text);
+	private: System::Void btnResult6_Click(System::Object^  sender, System::EventArgs^  e) {
+		AnalysisFinace analysisFinance;
+		if (AccountSpayable->Text == "" || GoodsSaves->Text == "" || Receivables->Text == "") {
+			MessageBox::Show("Недостаточно данных для анализа", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Asterisk);
+		}
+		else {
+			double goodsSaves = Convert::ToInt32(GoodsSaves->Text);
+			double accountSpayble = Convert::ToInt32(AccountSpayable->Text);
+			double receivables = Convert::ToInt32(Receivables->Text);
 
-		double workingCapital = analysisFinance.CalclateWorkingCapital(receivables, goodsSaves);
-		double cleanWorkingCapital = analysisFinance.CalculateCleanWorkingCapital(workingCapital, accountSpayble);
+			double workingCapital = analysisFinance.CalclateWorkingCapital(receivables, goodsSaves);
+			double cleanWorkingCapital = analysisFinance.CalculateCleanWorkingCapital(workingCapital, accountSpayble);
 
-		WorkingCapital->Text = workingCapital.ToString() + "руб";
-		CleanWorkingCapital->Text = cleanWorkingCapital.ToString() + "руб";
+			WorkingCapital->Text = workingCapital.ToString() + "руб";
+			CleanWorkingCapital->Text = cleanWorkingCapital.ToString() + "руб";
+
+			rtbFile->Text += "\nАнализ финансовой устойчивости:\n" + "Товарные запасы = " + GoodsSaves->Text + "\n";
+			rtbFile->Text += "Кредиторская задолженность = " + AccountSpayable->Text + "\n";
+			rtbFile->Text += "Дебиторская задолженность = " + Receivables->Text + "\n";
+			rtbFile->Text += "Результаты анализа\n";
+			rtbFile->Text += "Оборотный капитал = " + WorkingCapital->Text + "\n";
+			rtbFile->Text += "Чистый оборотный капитал = " + CleanWorkingCapital->Text + "\n";
+		}
 	}
-}
-private: System::Void btnFile_Click(System::Object^  sender, System::EventArgs^  e) {
-	label9->Visible = true;
-	label9->Visible = true;
-	label9->Visible = true;
-	label9->Visible = true;
-	label9->Visible = true;
-	label9->Visible = true;
-	btn1->Visible = false;
-	btn2->Visible = false;
-	btn3->Visible = false;
-	btn4->Visible = false;
-	btn5->Visible = false;
-	btn6->Visible = false;
-	rtbFile->Visible = true;
-}
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-	Author^ author = gcnew Author;
-	author->Show();
-}
-};
+	private: System::Void btnFile_Click(System::Object^  sender, System::EventArgs^  e) {
+		label9->Visible = true;
+		label9->Visible = true;
+		label9->Visible = true;
+		label9->Visible = true;
+		label9->Visible = true;
+		label9->Visible = true;
+		btn1->Visible = false;
+		btn2->Visible = false;
+		btn3->Visible = false;
+		btn4->Visible = false;
+		btn5->Visible = false;
+		btn6->Visible = false;
+		gbFile->Visible = true;
+	}
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		Author^ author = gcnew Author;
+		author->Show();
+	}
+	private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
+		Referense^ reference = gcnew Referense;
+		reference->Show();
+	}
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	}
+	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+		rtbFile->Clear();
+	}
+	private: System::Void button3_Click_1(System::Object^  sender, System::EventArgs^  e) {
+		Save->ShowDialog();
+		if ((Save->FileName) != nullptr) {
+			rtbFile->SaveFile(Save->FileName);
+		}
+		else {
+			MessageBox::Show("Вы не выбрали файл!", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Asterisk);
+		}
+	}
+	};
 }
