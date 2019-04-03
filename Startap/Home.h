@@ -269,6 +269,18 @@ namespace Startap {
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Label^  label37;
 	private: System::Windows::Forms::SaveFileDialog^  Save;
+private: System::Windows::Forms::Button^  button5;
+private: System::Windows::Forms::FontDialog^  Font;
+private: System::Windows::Forms::MenuStrip^  menuStrip1;
+private: System::Windows::Forms::ToolStripMenuItem^  öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  áåëûéToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  ÷åðíûéToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  ñèíèéToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  êðàñíûéToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  øðèôòToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  î÷èñòèòüToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  çàïèñàòüToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^  çàêðûòüÎêíîToolStripMenuItem;
 
 
 
@@ -410,10 +422,22 @@ namespace Startap {
 			this->label43 = (gcnew System::Windows::Forms::Label());
 			this->rtbFile = (gcnew System::Windows::Forms::RichTextBox());
 			this->gbFile = (gcnew System::Windows::Forms::GroupBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->áåëûéToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->÷åðíûéToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ñèíèéToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->êðàñíûéToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->øðèôòToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->î÷èñòèòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->çàïèñàòüToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->çàêðûòüÎêíîToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->Save = (gcnew System::Windows::Forms::SaveFileDialog());
+			this->Font = (gcnew System::Windows::Forms::FontDialog());
 			this->Logo->SuspendLayout();
 			this->Header->SuspendLayout();
 			this->Menu->SuspendLayout();
@@ -439,6 +463,7 @@ namespace Startap {
 			this->groupBox16->SuspendLayout();
 			this->groupBox17->SuspendLayout();
 			this->gbFile->SuspendLayout();
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// Logo
@@ -538,11 +563,11 @@ namespace Startap {
 			this->btnFile->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->btnFile->ForeColor = System::Drawing::Color::DarkOrange;
-			this->btnFile->Location = System::Drawing::Point(127, -2);
+			this->btnFile->Location = System::Drawing::Point(67, -2);
 			this->btnFile->Name = L"btnFile";
-			this->btnFile->Size = System::Drawing::Size(259, 64);
+			this->btnFile->Size = System::Drawing::Size(319, 64);
 			this->btnFile->TabIndex = 1;
-			this->btnFile->Text = L"Çàïèñàòü äàííûå â ôàéë";
+			this->btnFile->Text = L"Çàïèñàòü äàííûå â ôàéë Word";
 			this->btnFile->UseVisualStyleBackColor = false;
 			this->btnFile->Click += gcnew System::EventHandler(this, &Home::btnFile_Click);
 			// 
@@ -1819,20 +1844,22 @@ namespace Startap {
 			this->rtbFile->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->rtbFile->ForeColor = System::Drawing::Color::DarkOrange;
-			this->rtbFile->Location = System::Drawing::Point(17, 61);
+			this->rtbFile->Location = System::Drawing::Point(17, 94);
 			this->rtbFile->Name = L"rtbFile";
 			this->rtbFile->ScrollBars = System::Windows::Forms::RichTextBoxScrollBars::Vertical;
-			this->rtbFile->Size = System::Drawing::Size(599, 309);
+			this->rtbFile->Size = System::Drawing::Size(605, 276);
 			this->rtbFile->TabIndex = 13;
 			this->rtbFile->Text = L"";
 			// 
 			// gbFile
 			// 
 			this->gbFile->BackColor = System::Drawing::Color::Transparent;
+			this->gbFile->Controls->Add(this->button5);
 			this->gbFile->Controls->Add(this->button4);
 			this->gbFile->Controls->Add(this->button3);
 			this->gbFile->Controls->Add(this->label37);
 			this->gbFile->Controls->Add(this->rtbFile);
+			this->gbFile->Controls->Add(this->menuStrip1);
 			this->gbFile->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->gbFile->Font = (gcnew System::Drawing::Font(L"Rockwell", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -1843,6 +1870,27 @@ namespace Startap {
 			this->gbFile->TabIndex = 13;
 			this->gbFile->TabStop = false;
 			this->gbFile->Text = L"Çàïèñü äàííûõ â ôàéë";
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::Transparent;
+			this->button5->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button5->FlatAppearance->BorderSize = 0;
+			this->button5->FlatAppearance->CheckedBackColor = System::Drawing::Color::Red;
+			this->button5->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Maroon;
+			this->button5->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Maroon;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button5->ForeColor = System::Drawing::Color::DarkOrange;
+			this->button5->Location = System::Drawing::Point(251, 386);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(155, 46);
+			this->button5->TabIndex = 17;
+			this->button5->Text = L"Øðèôò";
+			this->button5->UseMnemonic = false;
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &Home::button5_Click);
 			// 
 			// button4
 			// 
@@ -1877,7 +1925,7 @@ namespace Startap {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button3->ForeColor = System::Drawing::Color::DarkOrange;
-			this->button3->Location = System::Drawing::Point(479, 390);
+			this->button3->Location = System::Drawing::Point(467, 386);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(155, 46);
 			this->button3->TabIndex = 15;
@@ -1893,12 +1941,98 @@ namespace Startap {
 			this->label37->Font = (gcnew System::Drawing::Font(L"Rockwell", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label37->ForeColor = System::Drawing::Color::DarkOrange;
-			this->label37->Location = System::Drawing::Point(93, 31);
+			this->label37->Location = System::Drawing::Point(93, 59);
 			this->label37->Name = L"label37";
 			this->label37->Size = System::Drawing::Size(461, 26);
 			this->label37->TabIndex = 14;
 			this->label37->Text = L"Ïðîâåðüòå êîððåêòíîñòü äàííûõ ïåðåä çàïèñüþ";
 			this->label37->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->BackColor = System::Drawing::Color::DarkOrange;
+			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+				this->öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem,
+					this->øðèôòToolStripMenuItem, this->î÷èñòèòüToolStripMenuItem, this->çàïèñàòüToolStripMenuItem, this->çàêðûòüÎêíîToolStripMenuItem
+			});
+			this->menuStrip1->Location = System::Drawing::Point(3, 31);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(40, 2, 0, 2);
+			this->menuStrip1->Size = System::Drawing::Size(634, 26);
+			this->menuStrip1->TabIndex = 18;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem
+			// 
+			this->öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->áåëûéToolStripMenuItem,
+					this->÷åðíûéToolStripMenuItem, this->ñèíèéToolStripMenuItem, this->êðàñíûéToolStripMenuItem
+			});
+			this->öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem->Name = L"öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem";
+			this->öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem->Size = System::Drawing::Size(178, 22);
+			this->öâåòÒåêñòîâîãîÏîëÿToolStripMenuItem->Text = L"Öâåò òåêñòîâîãî ïîëÿ";
+			// 
+			// áåëûéToolStripMenuItem
+			// 
+			this->áåëûéToolStripMenuItem->ForeColor = System::Drawing::Color::Maroon;
+			this->áåëûéToolStripMenuItem->Name = L"áåëûéToolStripMenuItem";
+			this->áåëûéToolStripMenuItem->Size = System::Drawing::Size(139, 22);
+			this->áåëûéToolStripMenuItem->Text = L"Áåëûé";
+			this->áåëûéToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::áåëûéToolStripMenuItem_Click);
+			// 
+			// ÷åðíûéToolStripMenuItem
+			// 
+			this->÷åðíûéToolStripMenuItem->ForeColor = System::Drawing::Color::Maroon;
+			this->÷åðíûéToolStripMenuItem->Name = L"÷åðíûéToolStripMenuItem";
+			this->÷åðíûéToolStripMenuItem->Size = System::Drawing::Size(139, 22);
+			this->÷åðíûéToolStripMenuItem->Text = L"×åðíûé";
+			this->÷åðíûéToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::÷åðíûéToolStripMenuItem_Click);
+			// 
+			// ñèíèéToolStripMenuItem
+			// 
+			this->ñèíèéToolStripMenuItem->ForeColor = System::Drawing::Color::Maroon;
+			this->ñèíèéToolStripMenuItem->Name = L"ñèíèéToolStripMenuItem";
+			this->ñèíèéToolStripMenuItem->Size = System::Drawing::Size(139, 22);
+			this->ñèíèéToolStripMenuItem->Text = L"Ñèíèé";
+			this->ñèíèéToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::ñèíèéToolStripMenuItem_Click);
+			// 
+			// êðàñíûéToolStripMenuItem
+			// 
+			this->êðàñíûéToolStripMenuItem->ForeColor = System::Drawing::Color::Maroon;
+			this->êðàñíûéToolStripMenuItem->Name = L"êðàñíûéToolStripMenuItem";
+			this->êðàñíûéToolStripMenuItem->Size = System::Drawing::Size(139, 22);
+			this->êðàñíûéToolStripMenuItem->Text = L"Êðàñíûé";
+			this->êðàñíûéToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::êðàñíûéToolStripMenuItem_Click);
+			// 
+			// øðèôòToolStripMenuItem
+			// 
+			this->øðèôòToolStripMenuItem->Name = L"øðèôòToolStripMenuItem";
+			this->øðèôòToolStripMenuItem->Size = System::Drawing::Size(70, 22);
+			this->øðèôòToolStripMenuItem->Text = L"Øðèôò";
+			this->øðèôòToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::øðèôòToolStripMenuItem_Click);
+			// 
+			// î÷èñòèòüToolStripMenuItem
+			// 
+			this->î÷èñòèòüToolStripMenuItem->Name = L"î÷èñòèòüToolStripMenuItem";
+			this->î÷èñòèòüToolStripMenuItem->Size = System::Drawing::Size(87, 22);
+			this->î÷èñòèòüToolStripMenuItem->Text = L"Î÷èñòèòü";
+			this->î÷èñòèòüToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::î÷èñòèòüToolStripMenuItem_Click);
+			// 
+			// çàïèñàòüToolStripMenuItem
+			// 
+			this->çàïèñàòüToolStripMenuItem->Name = L"çàïèñàòüToolStripMenuItem";
+			this->çàïèñàòüToolStripMenuItem->Size = System::Drawing::Size(88, 22);
+			this->çàïèñàòüToolStripMenuItem->Text = L"Çàïèñàòü";
+			this->çàïèñàòüToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::çàïèñàòüToolStripMenuItem_Click);
+			// 
+			// çàêðûòüÎêíîToolStripMenuItem
+			// 
+			this->çàêðûòüÎêíîToolStripMenuItem->Name = L"çàêðûòüÎêíîToolStripMenuItem";
+			this->çàêðûòüÎêíîToolStripMenuItem->Size = System::Drawing::Size(120, 22);
+			this->çàêðûòüÎêíîToolStripMenuItem->Text = L"Çàêðûòü îêíî";
+			this->çàêðûòüÎêíîToolStripMenuItem->Click += gcnew System::EventHandler(this, &Home::çàêðûòüÎêíîToolStripMenuItem_Click);
 			// 
 			// Home
 			// 
@@ -1918,10 +2052,9 @@ namespace Startap {
 			this->Controls->Add(this->Menu);
 			this->Controls->Add(this->Header);
 			this->Controls->Add(this->btn1);
-			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
 			this->ForeColor = System::Drawing::Color::Gold;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Home";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Home";
@@ -1969,6 +2102,8 @@ namespace Startap {
 			this->groupBox17->PerformLayout();
 			this->gbFile->ResumeLayout(false);
 			this->gbFile->PerformLayout();
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1997,6 +2132,7 @@ namespace Startap {
 		btn5->Visible = false;
 		btn6->Visible = false;
 		gbFile->Visible = false;
+		Save->Filter = "RTF|*.rtf";
 		Save->Filter = "RTF|*.rtf";
 
 	}
@@ -2254,10 +2390,47 @@ namespace Startap {
 		Save->ShowDialog();
 		if ((Save->FileName) != nullptr) {
 			rtbFile->SaveFile(Save->FileName);
+			rtbFile->SelectionColor = Color::Black;
 		}
 		else {
 			MessageBox::Show("Âû íå âûáðàëè ôàéë!", "Îøèáêà", MessageBoxButtons::OK, MessageBoxIcon::Asterisk);
 		}
 	}
-	};
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+	Font->ShowDialog();
+	rtbFile->Font = Font->Font;
+}
+private: System::Void çàêðûòüÎêíîToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	gbFile->Visible = false;
+}
+private: System::Void øðèôòToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	Font->ShowDialog();
+	rtbFile -> Font = Font->Font;
+}
+private: System::Void î÷èñòèòüToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	rtbFile->Clear();
+}
+private: System::Void çàïèñàòüToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	Save->ShowDialog();
+	if ((Save->FileName) != nullptr) {
+		rtbFile->SaveFile(Save->FileName);
+		rtbFile->SelectionColor = Color::Black;
+	}
+	else {
+		MessageBox::Show("Âû íå âûáðàëè ôàéë!", "Îøèáêà", MessageBoxButtons::OK, MessageBoxIcon::Asterisk);
+	}
+}
+private: System::Void áåëûéToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	rtbFile->BackColor = Color::White;
+}
+private: System::Void ÷åðíûéToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	rtbFile->BackColor = Color::Black;
+}
+private: System::Void ñèíèéToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	rtbFile->BackColor = Color::DarkBlue;
+}
+private: System::Void êðàñíûéToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	rtbFile->BackColor = Color::Maroon;
+}
+};
 }
